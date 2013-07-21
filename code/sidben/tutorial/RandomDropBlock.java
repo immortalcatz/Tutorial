@@ -9,7 +9,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
@@ -120,7 +119,7 @@ public class RandomDropBlock extends Block {
         
         // Debug
         System.out.println("===================================================");
-        System.out.println("BlockDropDye.getBlockDropped()");
+        System.out.println("RandomDropBlock.getBlockDropped()");
 		System.out.println("	Side:       " + FMLCommonHandler.instance().getEffectiveSide());
 		System.out.println("    Coords:     " + x + ", " + y + ", " + z);
 		System.out.println("");

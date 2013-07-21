@@ -5,6 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -53,6 +54,10 @@ public class ModTutorial {
 		// Random drop block recipe
 		GameRegistry.addRecipe(new ItemStack(randomDropBlock), "aa", "bb", 'a', new ItemStack(Item.dyePowder, 1, 0), 'b', new ItemStack(Item.dyePowder, 1, 15));
 		
+
+		// Register my custom event handler
+		TutorialEventHandler tutorialEventHandler = new TutorialEventHandler();
+		MinecraftForge.EVENT_BUS.register(tutorialEventHandler);
 	}
 	
 	
@@ -64,6 +69,10 @@ public class ModTutorial {
 	@Mod.EventHandler
 	public void serverStarting(FMLServerStartingEvent event) {
 	}
+	
+	
+	
+	
 
 	
 	
