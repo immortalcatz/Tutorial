@@ -30,8 +30,8 @@ public class MetaSevenBlock extends Block {
     /**
      * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
      */
-    public Icon getIcon(int par1, int par2) {
-        return Block.cloth.getIcon(1, 15 - par2);
+    public Icon getIcon(int side, int metadata) {
+        return Block.cloth.getIcon(1, metadata);
     }
 
 
