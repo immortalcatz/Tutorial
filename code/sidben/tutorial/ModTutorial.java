@@ -33,6 +33,7 @@ public class ModTutorial {
 	
 	// Blocks
 	public static Block randomDropBlock;
+	public static Block metaSevenBlock;
 	
 	
 	
@@ -45,6 +46,11 @@ public class ModTutorial {
 		GameRegistry.registerBlock(randomDropBlock, "RandomDropBlock");
 		LanguageRegistry.addName(randomDropBlock, "Random Drops Block");
 		
+        // Adds the meta seven block
+        metaSevenBlock         = new MetaSevenBlock(501).setHardness(0.8F).setUnlocalizedName("metaseven").setStepSound(Block.soundClothFootstep).func_111022_d("metaseven");
+        GameRegistry.registerBlock(metaSevenBlock, "MetaSevenBlock");
+        LanguageRegistry.addName(metaSevenBlock, "Metadata Seven Block");
+        
 	}
 	
 	
