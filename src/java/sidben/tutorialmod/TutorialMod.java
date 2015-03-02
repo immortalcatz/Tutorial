@@ -11,6 +11,7 @@ import sidben.tutorialmod.handler.ConfigurationHandler;
 import sidben.tutorialmod.handler.TutorialEventHandler;
 import sidben.tutorialmod.init.MyBlocks;
 import sidben.tutorialmod.init.MyItems;
+import sidben.tutorialmod.init.MyRecipes;
 import sidben.tutorialmod.proxy.IProxy;
 import sidben.tutorialmod.reference.Reference;
 
@@ -64,14 +65,9 @@ public class TutorialMod
 
 		// Block renderes
 		MyBlocks.registerRender();
-
-
-		// Random drop block recipe
-		/*
-		 * GameRegistry.addRecipe(new ItemStack(randomDropBlock), "aa", "bb",
-		 * 'a', new ItemStack(Items.apple, 1, 0), 'b', new ItemStack(
-		 * Items.book, 1, 0));
-		 */
+		
+		// Recipes
+		MyRecipes.register();
 
 		// Register my custom event handler
 		TutorialEventHandler tutorialEventHandler = new TutorialEventHandler();
