@@ -1,33 +1,37 @@
-package sidben.tutorialmod;
-/*
-import net.minecraft.block.Block;
+package sidben.tutorialmod.handler;
+
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
 
 
 public class TutorialEventHandler {
-
 	
-	@ForgeSubscribe
+	
+	private static final int HELMET_SLOT = 3;
+	
+	
+	
+	@SubscribeEvent
 	public void onLivingUpdateEvent(LivingUpdateEvent event) {
-		
+
 		// Check if it is a player
 		if (event.entity instanceof EntityPlayer) {
-			
+		
 			EntityPlayer player = (EntityPlayer) event.entity;
-
 
 			// Check if it is on water
 			if (player.isInWater()) {
 				
 				// Ask what the player is wearing (in a non-creepy way...)
-				// 4 = Head, 3 = Chest, 2 = Legs, 1 = Foot 				
-				ItemStack armorHead = player.getCurrentItemOrArmor(4);
+				ItemStack armorHead = player.getCurrentArmor(HELMET_SLOT);
 				
 				// Check if have the right helmet (MUST CHECK FOR NULL OR WILL CRASH!!!)
-				if (armorHead != null && armorHead.itemID == Block.pumpkin.blockID) {
+				if (armorHead != null && armorHead.getItem() == Item.getItemFromBlock(Blocks.pumpkin)) {
 					
 					// Makes air 100%  all the time
 					player.setAir(300);
@@ -37,10 +41,8 @@ public class TutorialEventHandler {
 			}
 			
 		}
-		
-	}
-
+	
+	}	
+	
 	
 }
-
-*/
