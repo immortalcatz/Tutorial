@@ -1,7 +1,6 @@
 package sidben.tutorialmod.handler;
 
 import java.io.File;
-import sidben.tutorialmod.helper.LogHelper;
 import sidben.tutorialmod.reference.Reference;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
