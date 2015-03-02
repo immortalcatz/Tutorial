@@ -14,33 +14,26 @@ public class MyItems
 {
 
 
-	// Items instances
-	public static final ItemCheese	cheese	= new ItemCheese();
+    // Items instances
+    public static final ItemCheese cheese = new ItemCheese();
 
 
 
-	// register the items
-	public static void register()
-	{
-		GameRegistry.registerItem(cheese, "cheese");
-	}
+    // register the items
+    public static void register()
+    {
+        GameRegistry.registerItem(cheese, "cheese");
+    }
 
 
-	// register the renderers
-	// ref -
-	// http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/modification-development/2272349-lessons-from-my-first-mc-1-8-mod
-	@SideOnly(Side.CLIENT)
-	public static void registerRender()
-	{
-		Minecraft
-		        .getMinecraft()
-		        .getRenderItem()
-		        .getItemModelMesher()
-		        .register(
-		                cheese,
-		                0,
-		                new ModelResourceLocation(Reference.ModID + ":"
-		                        + "cheese", "inventory"));
-	}
+    // register the renderers
+    // ref -
+    // http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/modification-development/2272349-lessons-from-my-first-mc-1-8-mod
+    @SideOnly(Side.CLIENT)
+    public static void registerRender()
+    {
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(cheese, 0, new ModelResourceLocation(Reference.ModID + ":" + "cheese", "inventory"));
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(cheese, 1, new ModelResourceLocation(Reference.ModID + ":" + "cheese", "inventory"));
+    }
 
 }
