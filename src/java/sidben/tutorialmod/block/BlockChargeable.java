@@ -9,7 +9,6 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -44,7 +43,6 @@ public class BlockChargeable extends BlockBasic
 		this.setStepSound(soundTypePiston);
 
 		this.setUnlocalizedName("chargeable");
-		this.setCreativeTab(CreativeTabs.tabBlock);
 
 		// Block State (old metadata)
 		this.setDefaultState(this.blockState.getBaseState().withProperty(CHARGE, Integer.valueOf(0)));

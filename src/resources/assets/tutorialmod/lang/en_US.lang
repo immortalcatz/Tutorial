@@ -4,3 +4,6 @@ tile.tutorialmod:chargeable.name=Chargeable Stone
 
 # Items
 item.tutorialmod:cheese.name=Piece of Cheese
+
+# Creative Tabs
+itemGroup.tutorialmod=Sidben Tutorial

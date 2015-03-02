@@ -7,7 +7,6 @@ import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.BlockTallGrass;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -38,7 +37,6 @@ public class BlockRandomDrops extends BlockBasic
 		super(Material.clay);								// Makes it like silverfish block, easier to break and don't require a pick
 		this.setHardness(0.75F);
 		
-		this.setCreativeTab(CreativeTabs.tabDecorations);
 		this.setUnlocalizedName("randomDrops");
 	}
 

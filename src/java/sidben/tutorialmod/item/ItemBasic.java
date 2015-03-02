@@ -1,7 +1,7 @@
 package sidben.tutorialmod.item;
 
+import sidben.tutorialmod.creativetab.CreativeTabTutorial;
 import sidben.tutorialmod.reference.Reference;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -12,7 +12,7 @@ public abstract class ItemBasic extends Item
 	
 	public ItemBasic() {
 		super();
-		this.setCreativeTab(CreativeTabs.tabMisc);
+		this.setCreativeTab(CreativeTabTutorial.TUTORIAL_TAB);
 	}
 	
 	 @Override

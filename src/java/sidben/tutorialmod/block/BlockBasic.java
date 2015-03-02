@@ -1,5 +1,6 @@
 package sidben.tutorialmod.block;
 
+import sidben.tutorialmod.creativetab.CreativeTabTutorial;
 import sidben.tutorialmod.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -12,6 +13,7 @@ public abstract class BlockBasic extends Block
 
 	protected BlockBasic(Material material) {
 		super(material);
+		 this.setCreativeTab(CreativeTabTutorial.TUTORIAL_TAB);
 	}
 
 	protected BlockBasic() {
