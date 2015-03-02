@@ -1,0 +1,12 @@
+v2.0 - MC 1.8 (inDev)
+
+- Updated to Minecraft 1.8
+- New cheese item
+
+
+
+
+NOTE: this changelog started at version 2.0
+
+sidbenmc.wordpress.com
+github.com/sidben
