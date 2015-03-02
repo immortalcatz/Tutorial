@@ -1,4 +1,4 @@
-package sidben.tutorial;
+package sidben.tutorialmod.block;
 
 
 import java.util.Random;
@@ -8,10 +8,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.util.Icon;
+//import net.minecraft.util.Icon;
 import net.minecraft.world.World;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 
 
@@ -19,25 +19,31 @@ public class MetaSevenBlock extends Block {
 
 
 
-    public MetaSevenBlock(int par1) {
-        super(par1, Material.cloth);
+	public MetaSevenBlock() {
+    //public MetaSevenBlock(int par1) {
+        //super(par1, Material.cloth);
+    	super(Material.cloth);
         this.setCreativeTab(CreativeTabs.tabBlock);
     }
 
 
+    /*
     @Override
     @SideOnly(Side.CLIENT)
     /**
      * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
      */
+    /*
     public Icon getIcon(int side, int metadata) {
         return Block.cloth.getIcon(1, metadata);
     }
+    */
 
 
     /**
      * Returns the ID of the items to drop on destruction.
      */
+	/*
     public int idDropped(int metadata, Random par2Random, int par3)
     {
         // If the metadata if < 7, always drop itself, the block is not "full"
@@ -49,10 +55,12 @@ public class MetaSevenBlock extends Block {
             return Item.dyePowder.itemID;
         }
     }
+    */
     
     /**
      * Determines the damage on the item the block drops. Used in cloth and wood.
      */
+	/*
     @Override
     public int damageDropped(int metadata) {
         // If the metadata if < 7, always drop meta 0, the block is not "full"
@@ -64,6 +72,7 @@ public class MetaSevenBlock extends Block {
             return 4;
         }
     }
+    */
 
 
     
@@ -72,6 +81,7 @@ public class MetaSevenBlock extends Block {
     /**
      * Called upon block activation (right click on the block.)
      */
+	/*
     @Override
     public boolean onBlockActivated(World par1World, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
         // Checks if the player have gunpowder in hand.
@@ -99,9 +109,10 @@ public class MetaSevenBlock extends Block {
 
         return false;
     }
+	 */
 
 
-
+	/*
     @Override
     public void onBlockDestroyedByPlayer(World world, int x, int y, int z, int meta) {
         System.out.println("Block destroyed by player - " + meta);
@@ -113,5 +124,6 @@ public class MetaSevenBlock extends Block {
             }
         } 
     }
+    */
 
 }

@@ -1,16 +1,16 @@
-package sidben.tutorial;
+package sidben.tutorialmod.block;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Icon;
+//import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
@@ -25,32 +25,37 @@ public class RandomDropBlock extends Block {
 		Default stuff
 	--------------------------------------------------------------------*/
 	
-    @SideOnly(Side.CLIENT)
-    private Icon myIcon;
+//    @SideOnly(Side.CLIENT)
+//    private Icon myIcon;
 
 	
-	public RandomDropBlock(int blockId) {
-		super(blockId, Material.cloth);
+	public RandomDropBlock() {
+	//public RandomDropBlock(int blockId) {
+		super(Material.cloth);
 	}
 
 	
-    @SideOnly(Side.CLIENT)
+    //@SideOnly(Side.CLIENT)
     /**
      * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
      */
+	/*
     public Icon getIcon(int par1, int par2)
     {
     	return Block.grass.getIcon(1, 0);
     }
+    */
 
-    @SideOnly(Side.CLIENT)
+    //@SideOnly(Side.CLIENT)
     /**
      * Retrieves the block texture to use based on the display side. Args: iBlockAccess, x, y, z, side
      */
+	/*
     public Icon getBlockTexture(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
     {
     	return Block.grass.getBlockTextureFromSide(1);
     }
+    */
     
     
 	
@@ -63,12 +68,14 @@ public class RandomDropBlock extends Block {
     /**
      * Returns the ID of the items to drop on destruction.
      */
+	/*
 	@Override
     public int idDropped(int par1, Random par2Random, int par3)
     {
     	// Makes the block drop nothing at first
         return 0;
     }
+    */
 
     /**
      * Returns the quantity of items to drop on block destruction.
@@ -102,7 +109,8 @@ public class RandomDropBlock extends Block {
         ArrayList<ItemStack> ret = new ArrayList<ItemStack>();
 
         // Gets how much items this block will drop
-        int count = quantityDropped(metadata, fortune, world.rand);
+        //int count = quantityDropped(metadata, fortune, world.rand);
+        int count = 7;
         
         /*
          * Below is the default vanilla code
@@ -142,31 +150,31 @@ public class RandomDropBlock extends Block {
         	
         	// Choose what will be on the list
         	if (luckDraw == 0) { 
-        		idDropped = Block.sapling.blockID;
+        		//idDropped = Block.sapling.blockID;
         		metaDropped = 1;
         		
         		System.out.println("    Adding spruce sapling.");			// Debug
         	}
         	if (luckDraw == 1) { 
-        		idDropped = Block.sapling.blockID;
+        		//idDropped = Block.sapling.blockID;
         		metaDropped = 3;
         		
         		System.out.println("    Adding jungle sapling.");			// Debug
         	}
         	if (luckDraw == 2) { 
-        		idDropped = Block.tallGrass.blockID;
+        		//idDropped = Block.tallGrass.blockID;
         		metaDropped = 2;
         		
         		System.out.println("    Adding fern.");						// Debug
         	}
         	if (luckDraw == 3) { 
-        		idDropped = Block.plantYellow.blockID;
+        		//idDropped = Block.plantYellow.blockID;
         		metaDropped = 0;
         		
         		System.out.println("    Adding yellow flower.");			// Debug
         	}
         	if (luckDraw == 4) { 
-        		idDropped = Block.plantRed.blockID;
+        		//idDropped = Block.plantRed.blockID;
         		metaDropped = 0;
         		
         		System.out.println("    Adding red flower.");				// Debug
@@ -174,7 +182,7 @@ public class RandomDropBlock extends Block {
         	
         	// Adds the block to the return list
         	if (idDropped > 0) {
-        		ret.add(new ItemStack(idDropped, 1, metaDropped));
+        		//ret.add(new ItemStack(idDropped, 1, metaDropped));
         	}
         }
 

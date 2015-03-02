@@ -1,5 +1,5 @@
-package sidben.tutorial;
-
+package sidben.tutorialmod;
+/*
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -18,7 +18,7 @@ public class TutorialEventHandler {
 			
 			EntityPlayer player = (EntityPlayer) event.entity;
 
-			
+
 			// Check if it is on water
 			if (player.isInWater()) {
 				
@@ -42,3 +42,5 @@ public class TutorialEventHandler {
 
 	
 }
+
+*/
