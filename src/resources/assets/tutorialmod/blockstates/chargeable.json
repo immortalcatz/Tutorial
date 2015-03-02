@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "charge=0": { "model": "stone" },
+        "charge=1": { "model": "stone" },
+        "charge=2": { "model": "stone" },
+        "charge=3": { "model": "stone" },
+        "charge=4": { "model": "stone" },
+        "charge=5": { "model": "tutorialmod:chargeable_full" }
+    }
+}

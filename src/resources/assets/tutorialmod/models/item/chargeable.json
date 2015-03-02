@@ -1,5 +1,5 @@
 {
-    "parent": "tutorialmod:block/chargeable_empty",
+    "parent": "block/stone",
     "display": {
         "thirdperson": {
 			"rotation": [ 10, -45, 170 ],

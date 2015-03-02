@@ -17,8 +17,7 @@ public class MyBlocks
 
 	// Blocks instances
 	public static final BlockRandomDrops	randomDrops			= new BlockRandomDrops();
-	public static final BlockChargeable		chargeableEmpty	= new BlockChargeable(false);
-	public static final BlockChargeable		chargeableFull		= new BlockChargeable(true);
+	public static final BlockChargeable		chargeable			= new BlockChargeable();
 
 
 
@@ -26,8 +25,7 @@ public class MyBlocks
 	public static void register()
 	{
 		GameRegistry.registerBlock(randomDrops, "random_drops");
-		GameRegistry.registerBlock(chargeableEmpty, "chargeable_empty");
-		GameRegistry.registerBlock(chargeableFull, "chargeable_full");
+		GameRegistry.registerBlock(chargeable, "chargeable");
 	}
 
 
@@ -37,8 +35,7 @@ public class MyBlocks
 	{
 		// ref: fakeores mod - https://github.com/elias54/FakeOres/blob/master/common/fr/elias/fakeores/client/ClientProxy.java
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(randomDrops), 0, new ModelResourceLocation(Reference.ModID + ":" + "random_drops", "inventory"));
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(chargeableEmpty), 0, new ModelResourceLocation(Reference.ModID + ":" + "chargeable_empty", "inventory"));
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(chargeableFull), 0, new ModelResourceLocation(Reference.ModID + ":" + "chargeable_full", "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(chargeable), 0, new ModelResourceLocation(Reference.ModID + ":" + "chargeable", "inventory"));
 	}
 
 }

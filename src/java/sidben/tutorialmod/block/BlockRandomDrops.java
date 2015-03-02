@@ -13,6 +13,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
@@ -45,9 +46,6 @@ public class BlockRandomDrops extends BlockBasic
 	
 
 
-	/*--------------------------------------------------------------------
-		Remove default drops
-	--------------------------------------------------------------------*/
 
 	/**
 	 * Returns the quantity of items to drop on block destruction.
@@ -142,5 +140,15 @@ public class BlockRandomDrops extends BlockBasic
     }
 	
 	
+    @Override
+    public int getExpDrop(IBlockAccess world, BlockPos pos, int fortune)
+    {
+        Random rand = world instanceof World ? ((World)world).rand : new Random();
+        int xp = MathHelper.getRandomIntegerInRange(rand, 1, 5);
+        LogHelper.info("This block is giving [" + xp + "] xp.");
+        
+        return xp;
+    }
+    
 
 }
