@@ -15,6 +15,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * Used just to try out custom textures. All credits goes to the icon creator.
  * 
  * "Magic" effect based on golden apple.
+ * 
  */
 
 public class ItemCheese extends ItemBasic
@@ -50,7 +51,7 @@ public class ItemCheese extends ItemBasic
 
     public EnumRarity getRarity(ItemStack stack)
     {
-        return stack.getMetadata() == 0 ? EnumRarity.RARE : EnumRarity.EPIC;
+        return stack.getMetadata() == 0 ? EnumRarity.COMMON : EnumRarity.EPIC;
     }
     
     

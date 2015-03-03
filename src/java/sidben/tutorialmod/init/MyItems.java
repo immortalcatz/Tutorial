@@ -5,7 +5,7 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import sidben.tutorialmod.item.ItemCheese;
+import sidben.tutorialmod.item.*;
 import sidben.tutorialmod.reference.Reference;
 
 
@@ -16,6 +16,7 @@ public class MyItems
 
     // Items instances
     public static final ItemCheese cheese = new ItemCheese();
+    public static final ItemBucketCheese bucketOfCheese = new ItemBucketCheese();
 
 
 
@@ -23,6 +24,7 @@ public class MyItems
     public static void register()
     {
         GameRegistry.registerItem(cheese, "cheese");
+        GameRegistry.registerItem(bucketOfCheese, "cheese_bucket");
     }
 
 
@@ -34,6 +36,7 @@ public class MyItems
     {
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(cheese, 0, new ModelResourceLocation(Reference.ModID + ":" + "cheese", "inventory"));
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(cheese, 1, new ModelResourceLocation(Reference.ModID + ":" + "cheese", "inventory"));
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(bucketOfCheese, 0, new ModelResourceLocation(Reference.ModID + ":" + "cheese_bucket", "inventory"));
     }
 
 }
