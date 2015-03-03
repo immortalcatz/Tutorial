@@ -1,6 +1,7 @@
 # Blocks
 tile.tutorialmod:randomDrops.name=Surprise Stone
 tile.tutorialmod:chargeable.name=Chargeable Stone
+tile.tutorialmod:cheese.name=Block of Cheese
 
 # Items
 item.tutorialmod:cheese.name=Piece of Cheese

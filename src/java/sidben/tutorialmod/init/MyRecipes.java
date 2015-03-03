@@ -14,6 +14,7 @@ public class MyRecipes
 
         // Basic recipe
         GameRegistry.addRecipe(new ItemStack(MyBlocks.chargeable), "rrr", "rsr", "rrr", 'r', new ItemStack(Items.redstone, 1, 0), 's', new ItemStack(Blocks.stone, 1, 0));      // 3x3 recipe, one stone surrounded by 8 redstone dust = Charged Stone 
+        GameRegistry.addRecipe(new ItemStack(MyBlocks.cheese), "cc", "cc", 'c', new ItemStack(MyItems.cheese)); // 2x2 recipe, 4 Cheese pieces = 1 Cheese Block
         
         // Shapeless recipe, returns item with metadata
         GameRegistry.addShapelessRecipe(new ItemStack(MyItems.cheese, 1, 1), new ItemStack(MyItems.cheese, 1, 0), new ItemStack(Items.experience_bottle, 1, 0));    // Cheese piece (metadata 0) + XP Bottle = Magic Cheese (metadata 1) 
