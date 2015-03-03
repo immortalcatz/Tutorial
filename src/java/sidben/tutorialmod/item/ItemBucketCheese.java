@@ -1,5 +1,7 @@
 package sidben.tutorialmod.item;
 
+import net.minecraft.init.Items;
+
 
 /*
  * "Bucket of Cheese" idea from http://www.minecraftforge.net/forum/index.php?topic=23872.0
@@ -19,6 +21,7 @@ public class ItemBucketCheese extends ItemBasic
         super();
         this.setMaxStackSize(1);
         this.setUnlocalizedName("cheese_bucket");
+        this.setContainerItem(Items.bucket);
     }
 
 
