@@ -5,12 +5,12 @@ import sidben.tutorialmod.reference.Reference;
 import net.minecraft.item.*;
 
 
-public abstract class ItemBasic extends Item 
+public abstract class ItemBasicFood extends ItemFood 
 {
 
 	
-	public ItemBasic() {
-		super();
+	public ItemBasicFood(int foodAmount, float saturation, boolean isWolfFood) {
+		super(foodAmount, saturation, isWolfFood);
 		this.setCreativeTab(CreativeTabTutorial.TUTORIAL_TAB);
 	}
 	
